@@ -7,6 +7,7 @@
   import Headline from '$lib/main/Headline.svelte';
   import Editor from '$lib/main/Editor.svelte';
   import Card from '$lib/main/Card.svelte';
+  import { entries } from '../store/entries';
 </script>
 
 <div class="mx-auto max-w-4xl grid grid-cols-app gap-8">
@@ -20,10 +21,9 @@
   <main class="py-4 space-y-4">
     <Headline />
     <Editor />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+    {#each $entries as entry}
+      <Card {entry} />
+    {/each}
   </main>
 </div>
 

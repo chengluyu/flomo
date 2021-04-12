@@ -1,12 +1,20 @@
-<script>
+<script lang="ts">
   import HashTag from '$lib/icons/HashTag.svelte';
   import Bold from './icons/Bold.svelte';
   import BulletList from './icons/BulletList.svelte';
   import Image from './icons/Image.svelte';
   import OrderedList from './icons/OrderedList.svelte';
   import Underline from './icons/Underline.svelte';
+  import { entries } from '../../store/entries';
+  import { nanoid } from 'nanoid';
 
   let textContent = '';
+
+  function create(): void {
+    const entry = { id: nanoid(), date: new Date(), tags: [], content: textContent };
+    entries.update((entries) => [entry, ...entries]);
+    textContent = '';
+  }
 </script>
 
 <section class="p-4 rounded-md border-2 border-gray-400 bg-white">
@@ -24,7 +32,7 @@
     <button><Bold /></button>
     <button><Underline /></button>
     <button><Image /></button>
-    <button class="send-button" disabled={textContent.length === 0}>发送</button>
+    <button class="send-button" disabled={textContent.length === 0} on:click={create}>发送</button>
   </div>
 </section>
 
