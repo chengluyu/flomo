@@ -5,14 +5,13 @@
   import Image from './icons/Image.svelte';
   import OrderedList from './icons/OrderedList.svelte';
   import Underline from './icons/Underline.svelte';
-  import { entries } from '../../store/entries';
+  import { entries, create as createEntry } from '../../store/entries';
   import { nanoid } from 'nanoid';
 
   let textContent = '';
 
   function create(): void {
-    const entry = { id: nanoid(), date: new Date(), tags: [], content: textContent };
-    entries.update((entries) => [entry, ...entries]);
+    entries.update((entries) => [createEntry(textContent), ...entries]);
     textContent = '';
   }
 </script>

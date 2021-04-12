@@ -25,7 +25,7 @@
   </header>
   <main class="mt-2">
     <p>
-      {entry.content}
+      {@html entry.html}
     </p>
   </main>
 </article>
