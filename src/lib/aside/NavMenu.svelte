@@ -6,19 +6,19 @@
 </script>
 
 <section>
-  <a class="nav-section-item active" href="/app/memo">
+  <a class="nav-section-item active" href="/app">
     <Grid />
     <span class="uppercase">Memo</span>
   </a>
-  <a class="nav-section-item" href="/app/wechat">
+  <a class="nav-section-item" href="/app">
     <Chat />
     <span>微信输入</span>
   </a>
-  <a class="nav-section-item" href="/app/review">
+  <a class="nav-section-item" href="/app">
     <Calendar />
     <span>每日回顾</span>
   </a>
-  <a class="nav-section-item" href="/app/random">
+  <a class="nav-section-item" href="/app">
     <Mark />
     <span>随机漫步</span>
   </a>

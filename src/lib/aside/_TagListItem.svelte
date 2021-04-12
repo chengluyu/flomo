@@ -5,7 +5,7 @@
 </script>
 
 <div class="tag">
-  <a class="flex-1" href={`/app/tags/${tag}`}>{tag}</a>
+  <a class="flex-1" href={`/app`}>{tag}</a>
   <button class="menu-button"><Dots /></button>
 </div>
 
