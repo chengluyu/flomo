@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable, derived } from 'svelte/store';
 import { nanoid } from 'nanoid';
 import { render } from '../helpers/render';
 
@@ -11,6 +11,20 @@ export type Entry = {
 };
 
 export const entries = writable<Entry[]>([fake(), fake(), fake(), fake()]);
+
+export const tags = derived(entries, ($entries): string[] => {
+  const tags = new Set<string>();
+  for (const entry of $entries) {
+    for (const tag of entry.tags) {
+      tags.add(tag);
+    }
+  }
+  return [...tags.values()];
+});
+
+export const numberOfMemos = derived(entries, ($entries) => $entries.length);
+
+export const numberOfTags = derived(tags, ($tags) => $tags.length);
 
 export function create(content: string, tags: string[] = []): Entry {
   return {

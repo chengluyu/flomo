@@ -1,9 +1,13 @@
+<script lang="ts">
+  import { numberOfMemos, numberOfTags } from '../../store/entries';
+</script>
+
 <section class="grid grid-cols-3 text-gray-500">
   <div class="flex flex-col">
-    <span class="value">4</span><span class="unit">memo</span>
+    <span class="value">{$numberOfMemos}</span><span class="unit">memo</span>
   </div>
   <div class="flex flex-col">
-    <span class="value">4</span><span class="unit">tag</span>
+    <span class="value">{$numberOfTags}</span><span class="unit">tag</span>
   </div>
   <div class="flex flex-col">
     <span class="value">152</span><span class="unit">day</span>
