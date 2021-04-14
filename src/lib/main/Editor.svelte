@@ -6,7 +6,7 @@
   import OrderedList from './icons/OrderedList.svelte';
   import Underline from './icons/Underline.svelte';
   import { entries, create as createEntry } from '../../store/entries';
-  import { nanoid } from 'nanoid';
+  import { nanoid } from 'nanoid/non-secure';
 
   let textContent = '';
 

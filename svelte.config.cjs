@@ -3,8 +3,11 @@ const node = require('@sveltejs/adapter-node');
 const vercel = require('@sveltejs/adapter-vercel');
 const static = require('@sveltejs/adapter-static');
 const pkg = require('./package.json');
+const without = require('lodash/without');
 
 const adapters = { node, vercel, static };
+
+const remarkPackages = ['unified', 'remark-parse', 'remark-rehype', 'rehype-stringify'];
 
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
@@ -29,7 +32,7 @@ module.exports = {
 
     vite: {
       ssr: {
-        noExternal: Object.keys(pkg.dependencies || {})
+        noExternal: without(Object.keys(pkg.dependencies || {}), ...remarkPackages)
       }
     }
   }

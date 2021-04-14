@@ -39,7 +39,7 @@ devDependencies:
   '@sveltejs/adapter-node': 1.0.0-next.12
   '@sveltejs/adapter-static': 1.0.0-next.4
   '@sveltejs/adapter-vercel': 1.0.0-next.10
-  '@sveltejs/kit': 1.0.0-next.72_svelte@3.37.0+vite@2.1.5
+  '@sveltejs/kit': 1.0.0-next.74_svelte@3.37.0+vite@2.1.5
   '@types/lodash': 4.14.168
   autoprefixer: 10.2.5_postcss@8.2.10
   cross-env: 7.0.3
@@ -125,8 +125,8 @@ packages:
     resolution: {integrity: sha512-hEk1acpk02UsODC9NCF7VtooybXgLlnOX3JIWNkEtqihG6cfyMTOxAl+plT2APknB8i1cUt5FEe/O/r8LGql5Q==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.72_svelte@3.37.0+vite@2.1.5:
-    resolution: {integrity: sha512-Rr27O2UDQcC5HWgySRMwzOxBz84rPVsZVZrcuaOXcjx7y4DvJ9boqMJVxap5tHye9Jtt39YStg9SwTQOEL60Aw==}
+  /@sveltejs/kit/1.0.0-next.74_svelte@3.37.0+vite@2.1.5:
+    resolution: {integrity: sha512-2a8iW2h25CXpAnKc0c9QRqnbJ/gF2IzN43l29nPWoPmhbV4214qrAbr+JFaW61B0P0C619g8IHXJNB1DpluX/A==}
     engines: {node: '>= 12.17.0'}
     hasBin: true
     peerDependencies:

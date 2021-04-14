@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store';
-import { nanoid } from 'nanoid';
+import { nanoid } from 'nanoid/non-secure';
 import { render } from '../helpers/render';
 import { extractTags } from '../helpers/tags';
 
