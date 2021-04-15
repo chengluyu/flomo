@@ -1,7 +1,6 @@
 import { writable, derived } from 'svelte/store';
 import { nanoid } from 'nanoid/non-secure';
 import { render } from '../helpers/render';
-import { extractTags } from '../helpers/tags';
 
 export type Entry = {
   id: string;
@@ -28,13 +27,8 @@ export const numberOfMemos = derived(entries, ($entries) => $entries.length);
 export const numberOfTags = derived(tags, ($tags) => $tags.length);
 
 export function create(content: string): Entry {
-  return {
-    id: nanoid(),
-    date: new Date(),
-    tags: extractTags(content),
-    content,
-    html: render(content)
-  };
+  const [html, tags] = render(content);
+  return { id: nanoid(), date: new Date(), tags, content, html };
 }
 
 function fake(): Entry {

@@ -7,7 +7,14 @@ const without = require('lodash/without');
 
 const adapters = { node, vercel, static };
 
-const remarkPackages = ['unified', 'remark-parse', 'remark-rehype', 'rehype-stringify'];
+const remarkPackages = [
+  'unified',
+  'remark-parse',
+  'remark-rehype',
+  'rehype-stringify',
+  'unist-util-visit',
+  'lodash'
+];
 
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
