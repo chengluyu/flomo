@@ -14,7 +14,7 @@
   </div>
 </section>
 
-<style>
+<style style lang="postcss">
   .value {
     @apply text-2xl font-medium ordinal tabular-nums;
   }

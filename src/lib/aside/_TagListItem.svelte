@@ -9,7 +9,7 @@
   <button class="menu-button"><Dots /></button>
 </div>
 
-<style>
+<style style lang="postcss">
   .tag {
     @apply px-2 py-1;
     @apply -mx-2;

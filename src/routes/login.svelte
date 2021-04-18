@@ -33,7 +33,7 @@
   <a class="reset-password-link" href="/recovery">忘记密码</a>
 </main>
 
-<style>
+<style style lang="postcss">
   :root {
     @apply bg-gray-50;
   }

@@ -35,7 +35,7 @@
   </div>
 </section>
 
-<style>
+<style style lang="postcss">
   .toolbar > button:not(:last-child) {
     @apply mr-4 text-gray-600;
     @apply focus:outline-none focus:text-gray-900;

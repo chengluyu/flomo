@@ -24,7 +24,7 @@
   </a>
 </section>
 
-<style>
+<style style lang="postcss">
   .nav-section-item {
     @apply px-2 py-1.5;
     @apply -mx-2;

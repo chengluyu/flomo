@@ -27,5 +27,5 @@
   </main>
 </div>
 
-<style>
+<style style lang="postcss">
 </style>

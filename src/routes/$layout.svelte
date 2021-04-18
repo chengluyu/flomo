@@ -5,7 +5,7 @@
 
 <slot />
 
-<style>
+<style style lang="postcss">
   :root {
     @apply bg-gray-50;
   }
