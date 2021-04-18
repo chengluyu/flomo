@@ -11,6 +11,6 @@
     {/each}
   </main>
   <footer>
-    <a class="text-sm text-gray-500" href="/app">查看全部标签</a>
+    <a class="text-sm text-gray-500" href="/app/tags">查看全部标签</a>
   </footer>
 </section>

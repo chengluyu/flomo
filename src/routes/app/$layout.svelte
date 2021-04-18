@@ -5,9 +5,6 @@
   import TagList from '$lib/aside/TagList.svelte';
   import Header from '$lib/aside/Header.svelte';
   import Headline from '$lib/main/Headline.svelte';
-  import Editor from '$lib/main/Editor.svelte';
-  import Card from '$lib/main/Card.svelte';
-  import { entries } from '../store/entries';
 </script>
 
 <div class="mx-auto max-w-4xl grid grid-cols-app gap-8">
@@ -19,13 +16,7 @@
     <TagList />
   </aside>
   <main class="py-4 space-y-4">
-    <Headline />
-    <Editor />
-    {#each $entries as entry}
-      <Card {entry} />
-    {/each}
+    <Headline><slot name="title" /></Headline>
+    <slot />
   </main>
 </div>
-
-<style style lang="postcss">
-</style>

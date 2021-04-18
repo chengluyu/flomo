@@ -1,11 +1,12 @@
 <script lang="ts">
   import Dots from '$lib/icons/Dots.svelte';
+  import { page } from '$app/stores';
 
   export let tag: string;
 </script>
 
-<div class="tag">
-  <a class="flex-1" href={`/app`}>{tag}</a>
+<div class="tag" class:active={$page.params.tag === tag}>
+  <a class="flex-1" href={`/app/tags/${tag}`}>{tag}</a>
   <button class="menu-button"><Dots /></button>
 </div>
 
@@ -23,6 +24,11 @@
   .tag::before {
     content: '#';
     @apply mr-1;
+  }
+
+  .tag.active {
+    @apply text-gray-100;
+    @apply bg-green-500;
   }
 
   .menu-button {
