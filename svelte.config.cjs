@@ -13,7 +13,8 @@ const remarkPackages = [
   'remark-rehype',
   'rehype-stringify',
   'unist-util-visit',
-  'lodash'
+  'lodash',
+  'mention-hashtag'
 ];
 
 /** @type {import('@sveltejs/kit').Config} */
