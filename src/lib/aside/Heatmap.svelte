@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { range } from 'lodash';
+  import range from 'lodash/range.js';
 
   const TOTAL_WEEKS = 12;
   const DAYS_PER_WEEK = 7;
