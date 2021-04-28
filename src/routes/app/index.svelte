@@ -5,6 +5,6 @@
 </script>
 
 <Editor />
-{#each $entries as entry}
+{#each $entries as entry (entry.id)}
   <Card {entry} />
 {/each}
