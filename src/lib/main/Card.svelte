@@ -23,9 +23,7 @@
       {/each}
     </div>
   </header>
-  <main class="mt-2">
-    <p>
-      {@html entry.html}
-    </p>
+  <main class="mt-2 prose">
+    {@html entry.html}
   </main>
 </article>

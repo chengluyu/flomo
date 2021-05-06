@@ -1,5 +1,5 @@
 <script>
-  import Editor from '$lib/main/Editor.svelte';
+  import Editor from '$lib/Editor.svelte';
   import Card from '$lib/main/Card.svelte';
   import { entries } from '../../store/entries';
 </script>
