@@ -1,14 +1,18 @@
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
   import { Editor } from '@tiptap/core';
   import { defaultExtensions } from '@tiptap/starter-kit';
-  import HashTag from './icons/HashTag.svelte';
+  import { onDestroy,onMount } from 'svelte';
+  import type { TipTapNode } from '../helpers/extractTags';
+  import { extractTags } from '../helpers/extractTags';
+  import { createHashTagExtension } from '../helpers/hashTag';
+  import { create as createEntry,entries } from '../store/entries';
   import Bold from './icons/Bold.svelte';
   import BulletList from './icons/BulletList.svelte';
+  import HashTag from './icons/HashTag.svelte';
   import Image from './icons/Image.svelte';
   import OrderedList from './icons/OrderedList.svelte';
   import Underline from './icons/Underline.svelte';
-  import { entries, create as createEntry } from '../store/entries';
+
 
   let element: HTMLDivElement;
   let editor: Editor;
@@ -16,7 +20,7 @@
   onMount(() => {
     editor = new Editor({
       element: element,
-      extensions: defaultExtensions(),
+      extensions: [...defaultExtensions(), createHashTagExtension()],
       content: '<p>Hello World! 🌍️ </p>',
       onTransaction: () => {
         // force re-render so `editor.isActive` works as expected
@@ -32,15 +36,17 @@
   });
 
   function create(): void {
-    entries.update(($entries) => [createEntry(editor.getHTML()), ...$entries]);
+    const documentTree = editor.getJSON();
+    entries.update(($entries) => [
+      createEntry(editor.getHTML(), extractTags(documentTree as TipTapNode)),
+      ...$entries
+    ]);
     editor.chain().clearContent().run();
   }
 
   function heading(level: 1 | 2 | 3 | 4 | 5 | 6): void {
     editor.chain().focus().toggleHeading({ level }).run();
   }
-
-  function bulletList(): void {}
 </script>
 
 <section class="p-4 rounded-md border-2 border-gray-400 bg-white">
@@ -65,7 +71,7 @@
       >
         P
       </button>
-      <button><HashTag /></button>
+      <button on:click={() => editor.chain().focus().insertContent('#').run()}><HashTag /></button>
       <button
         on:click={() => editor.chain().focus().toggleBulletList().run()}
         class:active={editor.isActive('bulletList')}

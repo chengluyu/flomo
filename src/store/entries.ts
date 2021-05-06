@@ -24,8 +24,8 @@ export const numberOfMemos = derived(entries, ($entries) => $entries.length);
 
 export const numberOfTags = derived(tags, ($tags) => $tags.length);
 
-export function create(html: string): Entry {
-  return { id: nanoid(), date: new Date(), tags: [], html };
+export function create(html: string, tags: string[]): Entry {
+  return { id: nanoid(), date: new Date(), tags, html };
 }
 
 function fake(): Entry {
@@ -33,5 +33,5 @@ function fake(): Entry {
     '#welcome\n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum velit autem molestiae\
   dolorum odio officia. Distinctio et in debitis repellendus vel eos doloribus provident saepe\
   fuga hic reiciendis, ad id!';
-  return create(content);
+  return create(content, ['welcome']);
 }
