@@ -43,6 +43,7 @@
     "rehype-stringify": "^8.0.0",
     "remark-parse": "^9.0.0",
     "remark-rehype": "^8.1.0",
+    "tippy.js": "^6.3.1",
     "unified": "^9.2.1",
     "unist-util-visit": "^2.0.3"
   }

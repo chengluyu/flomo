@@ -23,7 +23,12 @@ module.exports = {
         ]
       },
       gridTemplateColumns: {
-        app: '240px minmax(0, 1fr)'
+        app: '240px minmax(0, 1fr)',
+        heatmap: 'repeat(12, 1rem)'
+      },
+      gridTemplateRows: {
+        app: '240px minmax(0, 1fr)',
+        heatmap: 'repeat(7, 1rem)'
       }
     }
   },

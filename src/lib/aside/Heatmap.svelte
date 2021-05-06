@@ -1,13 +1,24 @@
 <script lang="ts">
-  import range from 'lodash/range.js';
+  import HeatmapCell from './_HeatmapCell.svelte';
 
   const TOTAL_WEEKS = 12;
   const DAYS_PER_WEEK = 7;
-  const days = range(0, TOTAL_WEEKS * DAYS_PER_WEEK);
+  const dates = makeDates();
+
+  function makeDates(): Date[] {
+    const dates = [new Date()];
+    const n = TOTAL_WEEKS * DAYS_PER_WEEK;
+    for (let i = 1; i < n; i++) {
+      const date = new Date(dates[0]);
+      date.setDate(date.getDate() - 1);
+      dates.unshift(date);
+    }
+    return dates;
+  }
 </script>
 
-<section class="grid grid-rows-7 grid-cols-12 gap-1">
-  {#each days as _}
-    <div class="w-4 h-4 bg-gray-200 rounded-sm border border-transparent hover:border-green-400" />
+<section class="max-w-full grid grid-flow-col grid-rows-heatmap grid-cols-heatmap gap-1">
+  {#each dates as date}
+    <HeatmapCell date={date} />
   {/each}
 </section>
