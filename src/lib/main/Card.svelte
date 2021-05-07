@@ -1,8 +1,6 @@
 <script lang="ts">
-  import TagList from '$lib/aside/TagList.svelte';
   import Dots from '$lib/icons/Dots.svelte';
   import type { Entry } from 'src/store/entries';
-  import CardTag from './_CardTag.svelte';
 
   export let entry: Entry;
 </script>
@@ -16,11 +14,6 @@
         {entry.date.toLocaleString()}
       </div>
       <button class="ml-auto text-gray-400 focus:outline-none"><Dots /></button>
-    </div>
-    <div class="mt-2 text-sm space-x-1.5">
-      {#each entry.tags as tag}
-        <CardTag>{tag}</CardTag>
-      {/each}
     </div>
   </header>
   <main class="mt-2 prose">

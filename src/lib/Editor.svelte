@@ -49,7 +49,7 @@
   }
 </script>
 
-<section class="p-4 rounded-md border-2 border-gray-400 bg-white">
+<section class="p-4 rounded-md border-2 border-gray-200 bg-white">
   <div class="prose block w-full resize-none focus:outline-none" bind:this={element} />
   {#if editor}
     <div class="toolbar mt-2 w-full flex flex-row items-center">
