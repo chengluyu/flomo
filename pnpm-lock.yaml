@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@sveltejs/adapter-node': next
-  '@sveltejs/adapter-static': ^1.0.0-next.8
+  '@sveltejs/adapter-static': ^1.0.0-next.9
   '@sveltejs/adapter-vercel': ^1.0.0-next.16
   '@sveltejs/kit': next
   '@tailwindcss/typography': ^0.4.0
@@ -52,10 +52,10 @@ dependencies:
   unist-util-visit: 2.0.3
 
 devDependencies:
-  '@sveltejs/adapter-node': 1.0.0-next.18
-  '@sveltejs/adapter-static': 1.0.0-next.8
+  '@sveltejs/adapter-node': 1.0.0-next.19
+  '@sveltejs/adapter-static': 1.0.0-next.9
   '@sveltejs/adapter-vercel': 1.0.0-next.16_svelte@3.38.2+vite@2.2.4
-  '@sveltejs/kit': 1.0.0-next.101_svelte@3.38.2+vite@2.2.4
+  '@sveltejs/kit': 1.0.0-next.102_svelte@3.38.2
   '@tailwindcss/typography': 0.4.0_tailwindcss@2.1.2
   '@types/lodash': 4.14.168
   '@types/mdast': 3.0.3
@@ -135,12 +135,12 @@ packages:
       picomatch: 2.2.3
     dev: true
 
-  /@sveltejs/adapter-node/1.0.0-next.18:
-    resolution: {integrity: sha512-w0w9KKo2p/Aq68JIQyWjNVBg/OuNqaYbVNFf9TVgXcdlPJcY1NncwujqUqejBATTm+ZhQzyQqXoosgqYtTI5tA==}
+  /@sveltejs/adapter-node/1.0.0-next.19:
+    resolution: {integrity: sha512-8QXOm0x9xiRGNZl9H0VplhIRVk14tO67bHDihxpUuOG3gFYxsNvdISC0wrvdGHOOINDUj4K2pdSn8LEjPrml/A==}
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0-next.8:
-    resolution: {integrity: sha512-goE3v68y+pn+fayPDJCCQ7W1QQpSMl86pZS9RvjuG64+TEI/PGsZwYR1RRgvwIiDqu33wBEHj+3ZYHEpJO/gwg==}
+  /@sveltejs/adapter-static/1.0.0-next.9:
+    resolution: {integrity: sha512-yqZ+4dzi+2+2jDPHCrI7WrLdXyQ/0U56a7aFdepmodpvpxhazF203D1ez+AtTo27FjMmHjfI+q0O2FivUOosxg==}
     dev: true
 
   /@sveltejs/adapter-vercel/1.0.0-next.16_svelte@3.38.2+vite@2.2.4:
@@ -155,13 +155,12 @@ packages:
       - vite
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.101_svelte@3.38.2+vite@2.2.4:
-    resolution: {integrity: sha512-SwUImLhFmyaDsq7LKRJXPJRIOPa06SWENG7heko5FTRRLMpI/UDFcijjT2ln0Fp+AL9XfSbTHO8QrOflCMbfiQ==}
+  /@sveltejs/kit/1.0.0-next.102_svelte@3.38.2:
+    resolution: {integrity: sha512-zLCPiKguhN3LjOTnAqudYm9uhkc3O1ELAV8SkXvs1O/a7hWSMFlbuF0aWXE8g6f79aCKjihd29RrdFkLnaZrog==}
     engines: {node: '>= 12.17.0'}
     hasBin: true
     peerDependencies:
-      svelte: ^3.34.0
-      vite: ^2.2.3
+      svelte: ^3.38.2
     dependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.9_svelte@3.38.2+vite@2.2.4
       cheap-watch: 1.0.3
