@@ -2,7 +2,7 @@
   import { numberOfMemos, numberOfTags } from '../../store/entries';
 </script>
 
-<section class="grid grid-cols-3 text-gray-500">
+<section class="grid grid-cols-3">
   <div class="flex flex-col">
     <span class="value">{$numberOfMemos}</span><span class="unit">memo</span>
   </div>
@@ -16,9 +16,11 @@
 
 <style style lang="postcss">
   .value {
-    @apply text-2xl font-medium ordinal tabular-nums;
+    @apply text-gray-400;
+    @apply text-2xl font-semibold ordinal tabular-nums;
   }
   .unit {
+    @apply text-gray-500;
     @apply text-xs uppercase;
   }
 </style>
