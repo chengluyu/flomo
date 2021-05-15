@@ -2,6 +2,7 @@
   import Search from './_Search.svelte';
   import { page } from '$app/stores';
   import { derived } from 'svelte/store';
+  import Refresh from '$lib/icons/Refresh.svelte';
 
   const info = derived(page, ({ path, params }) => {
     if (/^\/app\/?$/.test(path)) {
@@ -23,10 +24,14 @@
     }
     return { title: path, search: true };
   });
+
 </script>
 
 <header class="w-full flex flex-row items-center">
-  <h1 class="text-xl font-medium text-gray-600">{$info.title}</h1>
+  <h1 class="text-xl font-medium text-gray-600">
+    <span>{$info.title}</span>
+    <button><Refresh /></button>
+  </h1>
   {#if $info.search}
     <Search />
   {/if}
