@@ -1,9 +1,11 @@
 <script lang="ts">
   import Logo from '$lib/Logo.svelte';
+
+
 </script>
 
 <svelte:head>
-  <title>Hello world!</title>
+  <title>flume</title>
 </svelte:head>
 
 <main class="pt-8 pb-10 mx-auto max-w-4xl min-h-screen flex flex-col">
@@ -16,17 +18,24 @@
     </nav>
   </header>
   <section class="my-auto flex flex-col items-center text-center">
-    <h2 class="text-4xl font-semibold">
-      重要的不是记录，<span class="text-green-500">而是更好地思考</span>
-    </h2>
-    <p class="mt-2 text-gray-300">
-      What makes differences is independent thinking about the words, not just note-taking
-    </p>
-    <p class="mt-10 text-gray-600 font-semibold">
-      绝大多数笔记产品都进入了误区，聚焦在「文档编辑」「剪藏文章」或「All in one」
-      <br />
-      而忽略了记笔记最根本的目的 —— 更好地思考
-    </p>
+    <h2 class="text-4xl font-semibold">flume: 一个 flomo 的开源实现</h2>
+    <p class="mt-2 text-gray-300">flume: an open-source alternative of flomo</p>
+  </section>
+  <section class="grid grid-cols-3 gap-4">
+    <article class="feature-card">
+      <p class="text-2xl font-medium mb-4">完全开源</p>
+      <p class="text-gray-500">
+        flume 的前端和后端都完全开源，你可以部署在自己的服务器上，也可以按照自己的想法进行扩展。
+      </p>
+    </article>
+    <article class="feature-card">
+      <p class="text-2xl font-medium mb-4">精简高效</p>
+      <p class="text-gray-500">flume 的前端和后端都使用较为简单的方法实现，并且确保高效运行。</p>
+    </article>
+    <article class="feature-card">
+      <p class="text-2xl font-medium mb-4">易于扩展</p>
+      <p class="text-gray-500">使用流行的开源框架，并且预置了可供扩展的接口。</p>
+    </article>
   </section>
   <footer class="mt-auto flex flex-col items-center">
     <div>
@@ -36,3 +45,12 @@
     </div>
   </footer>
 </main>
+
+<style style lang="postcss">
+  .feature-card {
+    @apply p-6;
+    @apply border border-gray-300;
+    @apply rounded-lg shadow-md;
+  }
+
+</style>
